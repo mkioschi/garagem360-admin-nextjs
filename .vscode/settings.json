@@ -1,0 +1,21 @@
+{
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    /*
+     * See more: https://www.tailwind-variants.org/docs/getting-started#intellisense-setup-optional
+     */
+    "tailwindCSS.experimental.classRegex": [
+        [
+            "tv\\(([^)]*)\\)",
+            "[\"'`]([^\"'`]*).*?[\"'`]"
+        ]
+    ]
+}
