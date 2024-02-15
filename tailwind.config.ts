@@ -10,6 +10,9 @@ const config = {
   ],
   prefix: '',
   theme: {
+    fontFamily: {
+      inter: 'var(--font-inter)',
+    },
     container: {
       center: true,
       padding: '2rem',
