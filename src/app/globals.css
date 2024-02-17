@@ -1,67 +1,193 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --blue-50: 237 249 255;
+    --blue-100: 215 239 255;
+    --blue-200: 185 228 255;
+    --blue-300: 136 214 255;
+    --blue-400: 80 189 255;
+    --blue-500: 40 157 255;
+    --blue-600: 27 132 255;
+    --blue-700: 10 102 235;
+    --blue-800: 15 82 190;
+    --blue-900: 19 72 149;
+    --blue-950: 17 45 90;
+  
+    --green-50: 239 254 244;
+    --green-100: 218 254 229;
+    --green-200: 183 251 205;
+    --green-300: 128 245 167;
+    --green-400: 65 231 122;
+    --green-500: 23 198 83;
+    --green-600: 13 172 68;
+    --green-700: 14 135 56;
+    --green-800: 17 106 49;
+    --green-900: 16 87 42;
+    --green-950: 2 49 21;
+  
+    --purple-50: 244 243 255;
+    --purple-100: 236 233 254;
+    --purple-200: 219 215 253;
+    --purple-300: 194 182 252;
+    --purple-400: 163 141 248;
+    --purple-500: 133 94 244;
+    --purple-600: 114 57 234;
+    --purple-700: 102 43 214;
+    --purple-800: 84 35 180;
+    --purple-900: 71 31 147;
+    --purple-950: 42 17 100;
+  
+    --yellow-50: 255 255 234;
+    --yellow-100: 255 253 197;
+    --yellow-200: 255 252 133;
+    --yellow-300: 255 243 70;
+    --yellow-400: 255 230 27;
+    --yellow-500: 246 192 0;
+    --yellow-600: 226 154 0;
+    --yellow-700: 187 110 2;
+    --yellow-800: 152 85 8;
+    --yellow-900: 124 69 11;
+    --yellow-950: 72 36 0;
+    
+    --red-50: 255 241 243;
+    --red-100: 255 227 231;
+    --red-200: 255 204 214;
+    --red-300: 255 162 179;
+    --red-400: 255 109 141;
+    --red-500: 248 40 90;
+    --red-600: 230 24 83;
+    --red-700: 194 14 70;
+    --red-800: 163 14 65;
+    --red-900: 139 16 63;
+    --red-950: 78 3 29;
+  
+    --primary: 27 132 255;
+    --primary-active: 10 102 235;
+    --primary-foreground: 255 255 255;
+  
+    --info: 114 57 234;
+    --info-active: 102 43 214;
+    --info-foreground: 255 255 255;
+  
+    --success: 23 198 83;
+    --success-active: 13 172 68;
+    --success-foreground: 255 255 255;
+  
+    --warning: 246 192 0;
+    --warning-active: 226 154 0;
+    --warning-foreground: 255 255 255;
+  
+    --danger: 248 40 90;
+    --danger-active: 230 24 83;
+    --danger-foreground: 255 255 255;
+  
+    --background: 252 252 252;
+    --foreground: 7 20 54;
+  
+    --card: 255 255 255;
+    --card-border: 241 241 244;
+    --card-foreground: 7 20 54;
+    --card-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.03);
+  
+    --border: 226 232 240;
+    --ring: 27 132 255;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
- 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
- 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
- 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
- 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
- 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
- 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
- 
     --radius: 0.5rem;
   }
- 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
- 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
- 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
- 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
- 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
- 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
- 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
- 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
- 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+  
+  [data-mode='dark'] {
+    --blue-50: 237 250 255;
+    --blue-100: 214 241 255;
+    --blue-200: 181 233 255;
+    --blue-300: 131 221 255;
+    --blue-400: 72 199 255;
+    --blue-500: 30 168 255;
+    --blue-600: 6 138 255;
+    --blue-700: 0 106 230;
+    --blue-800: 8 90 197;
+    --blue-900: 13 78 155;
+    --blue-950: 14 48 93;
+  
+    --green-50: 237 255 247;
+    --green-100: 214 255 238;
+    --green-200: 175 255 222;
+    --green-300: 113 255 198;
+    --green-400: 45 251 166;
+    --green-500: 2 229 137;
+    --green-600: 0 191 110;
+    --green-700: 0 162 97;
+    --green-800: 6 117 73;
+    --green-900: 8 95 62;
+    --green-950: 0 54 33;
+    
+    --purple-50: 246 242 255;
+    --purple-100: 238 232 255;
+    --purple-200: 222 212 255;
+    --purple-300: 200 177 255;
+    --purple-400: 173 133 255;
+    --purple-500: 136 63 255;
+    --purple-600: 136 48 247;
+    --purple-700: 122 30 227;
+    --purple-800: 102 24 191;
+    --purple-900: 84 22 156;
+    --purple-950: 52 11 106;
+  
+    --yellow-50: 254 254 232;
+    --yellow-100: 254 255 194;
+    --yellow-200: 255 254 136;
+    --yellow-300: 255 247 67;
+    --yellow-400: 255 232 16;
+    --yellow-500: 239 206 3;
+    --yellow-600: 197 154 0;
+    --yellow-700: 164 116 4;
+    --yellow-800: 135 90 12;
+    --yellow-900: 115 73 16;
+    --yellow-950: 67 39 5;
+  
+    --red-50: 255 241 242;
+    --red-100: 255 228 231;
+    --red-200: 254 205 212;
+    --red-300: 253 164 177;
+    --red-400: 251 113 136;
+    --red-500: 245 62 98;
+    --red-600: 228 40 85;
+    --red-700: 191 17 63;
+    --red-800: 159 18 60;
+    --red-900: 136 19 57;
+    --red-950: 76 5 26;
+    
+    --primary: 0 106 230;
+    --primary-active: 6 138 255;
+    --primary-foreground: 255 255 255;
+  
+    --info: 136 63 255;
+    --info-active: 173 133 255;
+    --info-foreground: 255 255 255;
+  
+    --success: 0 162 97;
+    --success-active: 0 191 110;
+    --success-foreground: 255 255 255;
+  
+    --warning: 197 154 0;
+    --warning-active: 239 206 3;
+    --warning-foreground: 255 255 255;
+  
+    --danger: 228 40 85;
+    --danger-active: 245 62 98;
+    --danger-foreground: 255 255 255;
+  
+    --background: 15 16 20;
+    --foreground: 245 245 245;
+  
+    --card: 22 24 29;
+    --card-border: 31 33 40;
+    --card-foreground: 245 245 245;
+    --card-shadow: none;
+  
+    --border: 31 33 40;
+    --ring: 0 106 230;
   }
 }
