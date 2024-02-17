@@ -131,6 +131,9 @@ const config = {
       boxShadow: {
         card: 'var(--card-shadow)',
       },
+      fontSize: {
+        md: ['15px', '22px'],
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
