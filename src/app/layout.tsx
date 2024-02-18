@@ -13,14 +13,14 @@ export const metadata: Metadata = {
   title: 'Garagem 360',
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+type RootLayoutProps = {
   children: React.ReactNode
-}>) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="pt-BR" className={inter.variable}>
-      <body className="min-h-dvh bg-background font-inter text-xs text-foreground antialiased sm:text-sm md:text-md lg:text-base">
+      <body className="bg-background font-inter text-xs text-foreground antialiased sm:text-sm md:text-md lg:text-base">
         {children}
       </body>
     </html>

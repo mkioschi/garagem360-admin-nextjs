@@ -132,7 +132,19 @@ const config = {
         card: 'var(--card-shadow)',
       },
       fontSize: {
+        '2xs': ['12px', '16px'],
+        xs: ['13px', '18px'],
+        sm: ['14px', '20px'],
         md: ['15px', '22px'],
+      },
+      height: {
+        '13': '3.25rem',
+        screen: '100dvh',
+        vh: '100vh',
+      },
+      minHeight: {
+        screen: '100dvh',
+        vh: '100vh',
       },
       borderRadius: {
         lg: 'var(--radius)',
