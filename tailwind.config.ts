@@ -12,7 +12,7 @@ const config = {
   prefix: '',
   theme: {
     fontFamily: {
-      inter: 'var(--font-inter)',
+      inter: 'var(--font-inter), Helvetica, "sans-serif"',
     },
     container: {
       center: true,
