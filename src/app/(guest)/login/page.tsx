@@ -1,7 +1,7 @@
-import { Logo } from '@/components/theme/logo'
+import { Logo } from '@/components/logo'
 import { Container } from '@/components/ui/container'
 
-import { LoginForm } from './login-form'
+import { LoginForm } from './components/login-form'
 
 export default function LoginPage() {
   return (
