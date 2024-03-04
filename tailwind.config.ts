@@ -79,11 +79,11 @@ const config = {
       },
       height: {
         '13': '3.25rem',
-        screen: '100dvh',
+        screen: '100svh',
         vh: '100vh',
       },
       minHeight: {
-        screen: '100dvh',
+        screen: '100svh',
         vh: '100vh',
       },
       borderRadius: {

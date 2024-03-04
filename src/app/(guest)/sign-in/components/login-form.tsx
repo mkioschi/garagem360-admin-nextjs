@@ -15,6 +15,8 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 
+import { signIn } from '../actions/signIn'
+
 const loginFormSchema = z.object({
   email: z
     .string({
@@ -33,10 +35,14 @@ type LoginFormData = z.infer<typeof loginFormSchema>
 export function LoginForm() {
   const form = useForm<LoginFormData>({
     resolver: zodResolver(loginFormSchema),
+    defaultValues: {
+      email: '',
+      password: '',
+    },
   })
 
   async function login(data: LoginFormData) {
-    console.log(data)
+    signIn(data.email, data.password)
   }
 
   return (

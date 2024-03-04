@@ -11,7 +11,7 @@ export default function LoginPage() {
           <h1 className="mb-3">
             <Logo className="w-40" />
           </h1>
-          <p className="text-sm text-muted">Entre no painel administrativo</p>
+          <p className="text-sm text-muted">Acesso ao painel administrativo.</p>
         </div>
 
         <LoginForm />
