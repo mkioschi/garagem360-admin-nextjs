@@ -14,6 +14,7 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { sleep } from '@/lib/utils'
 
 import { signIn } from './actions/signIn'
 
@@ -82,7 +83,9 @@ export function LoginForm() {
           )}
         />
 
-        <Button type="submit">Entrar</Button>
+        <Button type="submit" disabled={form.formState.isSubmitting}>
+          Entrar
+        </Button>
       </form>
     </Form>
   )

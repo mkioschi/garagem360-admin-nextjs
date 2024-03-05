@@ -1,7 +1,12 @@
 'use server'
 
+import { apiClient } from '@/lib/actions/api/api-client'
+
 export async function signIn(email: string, password: string) {
-  console.log(email, password)
+  const response = await apiClient('/auth/sign-in', 'POST', { email, password })
+
+  console.log(response)
+
   // try {
   //   const response = await fetch(
   //     'http://api.garagem360.local/admin/auth/login',
