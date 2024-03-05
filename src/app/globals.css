@@ -43,9 +43,9 @@
     --card-foreground: 7 20 54;
     --card-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.03);
   }
-  
+
   /* Dark mode */
-  [data-mode='dark'] {
+  [data-theme="dark"] {
     --ring: 27 132 255;
 
     --border: 54 56 67;

@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss'
 import { black, slate, white } from 'tailwindcss/colors'
 
 const config = {
-  darkMode: ['class', '[data-mode="dark"]'],
+  darkMode: ['class', '[data-theme="dark"]'],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
