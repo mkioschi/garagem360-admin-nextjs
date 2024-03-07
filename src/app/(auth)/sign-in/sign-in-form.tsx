@@ -14,11 +14,10 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { sleep } from '@/lib/utils'
 
-import { signIn } from './actions/signIn'
+import { authenticate } from './actions/authenticate'
 
-const loginFormSchema = z.object({
+const signInFormSchema = z.object({
   email: z
     .string({
       required_error: 'Digite seu e-mail.',
@@ -31,24 +30,31 @@ const loginFormSchema = z.object({
     .min(6, 'A senha deve conter no mínimo 6 caracteres.'),
 })
 
-type LoginFormData = z.infer<typeof loginFormSchema>
+type SignInFormData = z.infer<typeof signInFormSchema>
 
-export function LoginForm() {
-  const form = useForm<LoginFormData>({
-    resolver: zodResolver(loginFormSchema),
+export function SignInForm() {
+  const form = useForm<SignInFormData>({
+    resolver: zodResolver(signInFormSchema),
     defaultValues: {
       email: '',
       password: '',
     },
   })
 
-  async function login(data: LoginFormData) {
-    signIn(data.email, data.password)
+  async function handleSignIn(data: SignInFormData) {
+    const response = await authenticate(data.email, data.password)
+
+    if (response?.error) {
+      console.info(response?.error)
+    }
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(login)} className="flex flex-col gap-6">
+      <form
+        onSubmit={form.handleSubmit(handleSignIn)}
+        className="flex flex-col gap-6"
+      >
         <FormField
           control={form.control}
           name="email"

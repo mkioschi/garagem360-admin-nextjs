@@ -1,10 +1,9 @@
 import { Logo } from '@/components/logo'
 import { Container } from '@/components/ui/container'
 
-import { LoginForm } from './login-form'
+import { SignInForm } from './sign-in-form'
 
 export default function LoginPage() {
-  console.log('Here 123!')
   return (
     <div className="flex min-h-screen bg-card md:items-center md:bg-background">
       <Container className="max-w-md bg-card py-14 md:rounded-md md:border md:border-card-border md:shadow-card dark:md:shadow-none">
@@ -15,7 +14,7 @@ export default function LoginPage() {
           <p className="text-sm text-muted">Acesso ao painel administrativo.</p>
         </div>
 
-        <LoginForm />
+        <SignInForm />
       </Container>
     </div>
   )
