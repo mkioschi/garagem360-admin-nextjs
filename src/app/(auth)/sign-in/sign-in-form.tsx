@@ -45,6 +45,7 @@ export function SignInForm() {
     const response = await authenticate(data.email, data.password)
 
     if (response?.error) {
+      // TODO implement error toast
       console.info(response?.error)
     }
   }
